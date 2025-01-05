@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ações e Interações com Tailwind CSS</title>
+    <style>
+        /* Estilos adicionais para visualização mais clara */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        .container {
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ações e Interações com Tailwind CSS</h1>
+    <p>
+        Vamos explorar as diferentes interações que podem ser aplicadas a elementos usando Tailwind CSS.
+        Aqui estão os exemplos:
+    </p>
+
+    <div class="container mx-auto">
+        <!-- HOVER -->
+        <p><strong>Exemplo de HOVER:</strong> Quando o mouse passa sobre o botão, a cor de fundo muda dependendo do tamanho da tela. Para telas médias ou maiores (<code>md</code>), o botão terá a cor azul claro ao passar o mouse.</p>
+        <button class="bg-red-200 p-4 md:hover:bg-blue-200">
+            Passe o mouse aqui (md:hover:bg-blue-200)
+        </button>
+
+        <!-- ACTIVE -->
+        <p><strong>Exemplo de ACTIVE:</strong> Quando o botão está sendo clicado, a cor de fundo muda para verde claro.</p>
+        <button class="bg-red-200 p-4 active:bg-green-200">
+            Clique aqui (active:bg-green-200)
+        </button>
+
+        <!-- FOCUS -->
+        <p><strong>Exemplo de FOCUS:</strong> Quando o campo de texto recebe o foco (ao clicar ou navegar até ele), a cor de fundo muda para verde claro.</p>
+        <input class="w-full h-7 border-2 border-black m-3 focus:bg-green-200" type="text" placeholder="Clique ou use Tab para focar">
+
+        <!-- DISABLED -->
+        <p><strong>Exemplo de DISABLED:</strong> Quando o campo de texto está desabilitado, a cor de fundo muda para vermelho escuro.</p>
+        <input class="w-full h-7 border-2 border-black m-3 disabled:bg-red-500" type="text" disabled placeholder="Desabilitado">
+
+        <!-- FILE UPLOAD -->
+        <p><strong>Exemplo de Estilo para Upload:</strong> Personalize o botão de upload com uma cor de fundo diferente para o estado inicial.</p>
+        <input class="w-full h-7 border-2 border-black m-3 file:bg-green-600" type="file">
+        <!--GROUP HOVER-->
+        <div class="group/coisa :bg-blue-200 p-3 hover:bg-green-700">
+            <p class="text-black group-hover/coisa:text-white">texto 1</p>
+            <p class="text-gray-500 group-hover/coisa:text-white">texto 2</p>
+        </div>
+        <!--Darkmode - usando color scheme do sistema-->
+        <div class="bg-blue-100 p-3 dark:bg-blue-800">
+            <p class="text-black dark:text-white">texto 1</p>
+            <p class="text-gray-500 dark:text-white>texto 2"</p>
+        </div>
+        <!--Usando Estilos base-->
+        <h1>titulo da pagina</h1>
+        <!--Criando componentes-->
+        <div class="card"></div>
+        <!--Definindo um prefixo-->
+        <div class="b7-bg-green-500 b7-w-10 b7-h-10">
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            Experimente interagir com os elementos para ver os efeitos de cada estado (hover, active, focus, disabled).
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/*aqui podemos criar estilo base para os elementos, logico se vc trocar no html, o layer base deixa de ser prioridade.*/
+@layer base {
+    h1 {
+        @apply text-2xl;
+        @apply bg-yellow-600;
+    }
+}
+@layer components {
+    .card {
+        @apply m-2 p-3 border-2 border-gray-700 rounded-md;
+    }
+}
